@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Япония и её достопримечательности</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .image-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .image-item {
+            width: 300px;
+            height: 250px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #a855f7;
+            border-radius: 15px;
+        }
+        .image-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s ease-in-out;
+        }
+        .image-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .image-item:hover img {
+            filter: brightness(50%);
+        }
+        .image-item:hover .overlay {
+            opacity: 1;
+        }
+        h1 {
+            color: #a855f7;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="kyoto.html">Киото</a>
+        <a href="tokyo.html">Токио</a>
+        <a href="mountfuji.html">Фудзи</a>
+    </nav>
+    <div class="container">
+        <h1>Добро пожаловать в Японию!</h1>
+        <p>Откройте для себя удивительные места страны восходящего солнца.</p>
+        <div class="image-row">
+            <div class="image-item">
+                <a href="kyoto.html">
+                    <img src="kyoto.jpg" alt="Киото">
+                    <div class="overlay">Киото</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="tokyo.html">
+                    <img src="tokyo.jpg" alt="Токио">
+                    <div class="overlay">Токио</div>
+                </a>
+            </div>
+            <div class="image-item">
+                <a href="mountfuji.html">
+                    <img src="mountfuji.jpg" alt="Гора Фудзи">
+                    <div class="overlay">Фудзи</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
